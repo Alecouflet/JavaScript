@@ -166,15 +166,21 @@ function Navigator(){
 
 // Exo 14
 function init(){
-    var b = document.getElementById("submit");
-    var c = document.getElementById("reset");
+    var a = document.getElementById("text");
+    var env = document.getElementById("sub");
+    var rez = document.getElementById("res");
+    env.onclick = fctSubmit;
+    rez.onclick = remise_a_zero;
+}
 
-    function fctSubmit(){
-        var a = document.getElementById("text").value;
-        alert("Vous avez saisi : " + a);
-    }
-    function remise_a_zero(){
-        console.log($(exo14));
-        $(exo14)[0].reset();
-    }
+function remise_a_zero(){
+    var a = document.getElementById("text");
+    var c = document.getElementById("res");
+    alert("Vous avez reset le champ ");
+}
+
+function fctSubmit(){
+    var a = document.getElementById("text");
+    alert("Vous avez saisi : " + a.value);
+    document.getElementById("myForm").submit();
 }
